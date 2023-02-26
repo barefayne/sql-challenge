@@ -1,4 +1,4 @@
---Create Customer departments table
+--Create departments table
 
 CREATE TABLE departments (
     dept_no VARCHAR(5)   NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE departments (
     PRIMARY KEY (dept_no)
 );
 
---Create Customer dept_emp table
+--Create dept_emp table
 CREATE TABLE dept_emp (
     emp_no INT   NOT NULL,
     dept_no VARCHAR(5)   NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE dept_emp (
     PRIMARY KEY (emp_no, dept_no)
 );
 
---Create Customer dept_manager table
+--Create dept_manager table
 CREATE TABLE dept_manager (
     dept_no VARCHAR(5)   NOT NULL,
     emp_no INT   NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE dept_manager (
 	FOREIGN KEY(emp_no) REFERENCES employees (emp_no)
 );
 
---Create Customer employees table
+--Create employees table
 CREATE TABLE employees (
     emp_no INT   NOT NULL,
     emp_title_id VARCHAR(5)   NOT NULL,
@@ -38,14 +38,14 @@ CREATE TABLE employees (
 	FOREIGN KEY(emp_title_id) REFERENCES titles (title_id)
 );
 
---Create Customer salaries table
+--Create salaries table
 CREATE TABLE salaries (
     emp_no INT   NOT NULL,
     salary INT   NOT NULL,
     PRIMARY KEY (emp_no)
 );
 
---Create Customer titles table
+--Create titles table
 CREATE TABLE titles (
     title_id VARCHAR(5)   NOT NULL,
     title VARCHAR(50)   NOT NULL,
